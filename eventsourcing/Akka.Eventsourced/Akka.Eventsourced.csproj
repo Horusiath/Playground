@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CF9178A3-B87A-4282-8659-6A25EE800F8A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Akka.Eventsourced</RootNamespace>
+    <AssemblyName>Akka.Eventsourced</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Akka, Version=1.1.2.29, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Akka.1.1.2\lib\net45\Akka.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.1.37.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Collections.Immutable.1.1.37\lib\dotnet\System.Collections.Immutable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConditionalCommand.cs" />
+    <Compile Include="ConfirmedDelivery.cs" />
+    <Compile Include="CRDT\Counter.cs" />
+    <Compile Include="CRDT\CRDTService.cs" />
+    <Compile Include="CRDT\ISerializableCRDT.cs" />
+    <Compile Include="CRDT\LastWriteWinsRegister.cs" />
+    <Compile Include="CRDT\MultiValueRegister.cs" />
+    <Compile Include="CRDT\ORSet.cs" />
+    <Compile Include="DurableEvent.cs" />
+    <Compile Include="EventLogs\BatchingLayer.cs" />
+    <Compile Include="EventLogs\ChunkedEventReplay.cs" />
+    <Compile Include="EventLogs\CircuitBreaker.cs" />
+    <Compile Include="EventLogs\EventLog.cs" />
+    <Compile Include="EventLogs\EventLog.Messages.cs" />
+    <Compile Include="EventLogs\IEventLogStorageProvider.cs" />
+    <Compile Include="EventLogs\NotificationChannel.cs" />
+    <Compile Include="EventLogs\SubscriberRegistry.cs" />
+    <Compile Include="EventsourcedActor.cs" />
+    <Compile Include="EventsourcedProtocol\Protocol.cs" />
+    <Compile Include="EventsourcedView.cs" />
+    <Compile Include="PersistOnEvent.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recovery.cs" />
+    <Compile Include="ReplciationFilter.cs" />
+    <Compile Include="ReplicationConnection.cs" />
+    <Compile Include="ReplicationEndpoint.cs" />
+    <Compile Include="ReplicationProtocol\Protocol.cs" />
+    <Compile Include="Replicator.cs" />
+    <Compile Include="Serialization\CRDTSerializer.cs" />
+    <Compile Include="Serialization\DurableEventSerializer.cs" />
+    <Compile Include="Serialization\ReplicationFilterSerializer.cs" />
+    <Compile Include="Serialization\ReplicationProtocolSerializer.cs" />
+    <Compile Include="Serialization\SnapshotSerializer.cs" />
+    <Compile Include="Snapshot.cs" />
+    <Compile Include="Snapshotting\ISnapshotStore.cs" />
+    <Compile Include="VectorTime.cs" />
+    <Compile Include="Versioned.cs" />
+    <Compile Include="VersionedAggregate.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

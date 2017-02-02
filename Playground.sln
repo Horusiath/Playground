@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "eventsourcing", "eventsourcing", "{19743358-D3CA-415B-9A81-A05AB1B94562}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "clusters", "clusters", "{C9A9110F-B899-45E9-9143-07B858FBE11B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "transports", "transports", "{A749771E-6977-4C51-96EE-52CE3D17C6A1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "streams", "streams", "{10466A1F-4E69-4B4E-96E7-97F50A4566BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akka.Cluster.Sharding.PerfRebalancer", "clusters\Akka.Cluster.Sharding.PerfRebalancer\Akka.Cluster.Sharding.PerfRebalancer.csproj", "{64E58568-2C3C-4CBF-AC4F-3B2A5F673034}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akka.Eventsourced", "eventsourcing\Akka.Eventsourced\Akka.Eventsourced.csproj", "{CF9178A3-B87A-4282-8659-6A25EE800F8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akka.Streams.Kafka", "streams\Akka.Streams.Kafka\Akka.Streams.Kafka.csproj", "{7E76656D-57C9-4CDE-9838-2C1F6A24D889}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akka.Remote.Transport.Grpc", "transports\Akka.Remote.Transport.Grpc\Akka.Remote.Transport.Grpc.csproj", "{D5EEAFC8-6FF5-4D9A-AE47-4E62B79F2665}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Akka.Remote.Transport.Pipelines", "transports\Akka.Remote.Transport.Pipelines\Akka.Remote.Transport.Pipelines.csproj", "{3F1C680B-B1D2-4D6D-B3AC-CB7AA67627CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64E58568-2C3C-4CBF-AC4F-3B2A5F673034}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64E58568-2C3C-4CBF-AC4F-3B2A5F673034}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64E58568-2C3C-4CBF-AC4F-3B2A5F673034}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64E58568-2C3C-4CBF-AC4F-3B2A5F673034}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF9178A3-B87A-4282-8659-6A25EE800F8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF9178A3-B87A-4282-8659-6A25EE800F8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF9178A3-B87A-4282-8659-6A25EE800F8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF9178A3-B87A-4282-8659-6A25EE800F8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E76656D-57C9-4CDE-9838-2C1F6A24D889}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E76656D-57C9-4CDE-9838-2C1F6A24D889}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E76656D-57C9-4CDE-9838-2C1F6A24D889}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E76656D-57C9-4CDE-9838-2C1F6A24D889}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5EEAFC8-6FF5-4D9A-AE47-4E62B79F2665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5EEAFC8-6FF5-4D9A-AE47-4E62B79F2665}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5EEAFC8-6FF5-4D9A-AE47-4E62B79F2665}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5EEAFC8-6FF5-4D9A-AE47-4E62B79F2665}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F1C680B-B1D2-4D6D-B3AC-CB7AA67627CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F1C680B-B1D2-4D6D-B3AC-CB7AA67627CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F1C680B-B1D2-4D6D-B3AC-CB7AA67627CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F1C680B-B1D2-4D6D-B3AC-CB7AA67627CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{64E58568-2C3C-4CBF-AC4F-3B2A5F673034} = {C9A9110F-B899-45E9-9143-07B858FBE11B}
+		{CF9178A3-B87A-4282-8659-6A25EE800F8A} = {19743358-D3CA-415B-9A81-A05AB1B94562}
+		{7E76656D-57C9-4CDE-9838-2C1F6A24D889} = {10466A1F-4E69-4B4E-96E7-97F50A4566BF}
+		{D5EEAFC8-6FF5-4D9A-AE47-4E62B79F2665} = {A749771E-6977-4C51-96EE-52CE3D17C6A1}
+		{3F1C680B-B1D2-4D6D-B3AC-CB7AA67627CE} = {A749771E-6977-4C51-96EE-52CE3D17C6A1}
+	EndGlobalSection
+EndGlobal
